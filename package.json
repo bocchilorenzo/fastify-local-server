@@ -1,0 +1,22 @@
+{
+  "name": "fastify-local-server",
+  "version": "1.0.0",
+  "description": "Launch local server in the current directory",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build-all": "pkg server.js -t node20-win-x64,node20-macos-x64,node20-linux-x64 -o local-server",
+    "build-win": "pkg server.js -t node20-win-x64 -o local-server",
+    "build-mac": "pkg server.js -t node20-macos-x64 -o local-server",
+    "build-linux": "pkg server.js -t node20-linux-x64 -o local-server"
+  },
+  "author": "Lorenzo Bocchi",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@fastify/static": "^6.12.0",
+    "fastify": "^4.24.3"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^5.11.0"
+  }
+}
